@@ -13,19 +13,11 @@ fn get_input(filename: String) -> Vec<i32> {
     line.split(",").map(|x|x.to_string().parse().unwrap()).collect()
 }
 
-// Examples:
-//
-// 1101,100,-1,4,0  --->  99
-// 1101,100,-1,4,99
-//
-//
-
-
 fn main() {
     let args: Vec<String> = env::args().collect();
 
     if args.len() < 2 {
-        eprintln!("Usages: ./main filename");
+        eprintln!("Usages: ./main diagnostic.txt");
         return;
     }
 
